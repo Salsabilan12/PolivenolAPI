@@ -9,12 +9,14 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
 
     :root {
-      --primary: #1B191A;
+      --primary: #1A120B;
       --secondary: #f7f7ff;
-      --orange: #EAB049;
-      --font-primary: 'Quicksand', sans-serif;
+      --third: #D5CEA3;
+      --choco: #3C2A21;
+      --font-primary: 'Montserrat', 'Quicksand', sans-serif;
       --font-code: 'Courier Prime', monospace;
       --white: #fff;
     }
@@ -56,7 +58,7 @@
     .base-url-wrapper h3 {
       font-size: 1.5em;
       margin-bottom: 8px;
-      font-weight: 600;
+      font-weight: 500;
     }
 
     .base-url-wrapper__link {
@@ -66,7 +68,7 @@
     .base-url-wrapper__link a {
       font-size: 0.9em;
       font-weight: 600;
-      color: var(--orange);
+      color: var(--choco);
     }
 
     .endpoints h3 {
@@ -78,12 +80,12 @@
     .endpoint h5 {
       font-size: 1.2em;
       margin-bottom: 18px;
-      font-weight: 600;
+      font-weight: 500;
     }
 
     .endpoint__desc {
       font-size: 1em;
-      border-left: 5px solid var(--orange);
+      border-left: 5px solid var(--choco);
       padding: 4px 18px;
       font-weight: 600;
       color: rgba(0, 0, 0, 0.5);
@@ -100,8 +102,8 @@
     }
 
     .endpoint__detail span {
-      background-color: var(--secondary);
-      color: var(--orange);
+      background-color: var(--third);
+      color: var(--choco);
       padding: 2px 4px;
       font-weight: 500;
       font-family: var(--font-code);
@@ -164,7 +166,7 @@
       }
 
       .nav-bar ul li a:hover {
-        color: var(--orange);
+        color: var(--choco);
       }
 
       .nav-bar ul li {
@@ -193,7 +195,7 @@
       }
 
       .active {
-        border-right: 5px solid var(--orange);
+        border-right: 5px solid var(--choco);
       }
     }
 
@@ -237,15 +239,16 @@
           <li class="nav-bar__brand"><a href="#title">Polivenol - Product API</a></li>
           <li class="nav-bar__link"><a href="#baseUrl">Base URL</a></li>
           <li>Endpoints</li>
-          <li class="nav-bar__link__inner"><a href="#getProduct">Get All Product</a></li>
+          <li class="nav-bar__link__inner"><a href="#getProduct">Get All Products</a></li>
           <li class="nav-bar__link__inner"><a href="#addProduct">Add Product</a></li>
+          <li class="nav-bar__link__inner"><a href="#getDetailProduct">Get Detail Product</a></li>
           <li class="nav-bar__link__inner"><a href="#editProduct">Edit Product</a></li>
           <li class="nav-bar__link__inner"><a href="#deleteProduct">Delete Product</a></li>
         </ul>
       </nav>
       <div class="content">
         <h1 class="content__header" id="title">Polivenol - Product API</h1>
-        <div class="base-url-wrapper" id="base-url">
+        <div class="base-url-wrapper" id="baseUrl">
           <h3>Base URL</h3>
           <p class="base-url-wrapper__link"><a href="">http://localhost:8000/</a></p>
         </div>
@@ -269,12 +272,13 @@
                 <p>"id": "D9eZBQin_QLW6Mz3",</p>
                 <p>"title": "Es Kopi Susu Gula Aren",</p>
                 <p>"image": "https://i.pinimg.com/564x/10/8d/4d/108d4dc285b5ee49addf46b51bb189f7.jpg",</p>
-                <p>"desc": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",</p>
+                <p>"desc": "Es kopi susu kekinian (kadang disebut es kopi susu gula aren) adalah istilah untuk mencakup jenis racikan kopi yang mengandung susu dan gula aren. Racikan ini umumnya disajikan dingin dengan es dalam kemasan gelas plastik bertutup."</p>
                 <p>"tokopedia": "-",</p>
                 <p>"instagram": "https://www.instagram.com/polivenol_roastery/",</p>
                 <p>"location": "Kantin RIK (Rumpun Ilmu Kesehatan) UI",</p>
                 <p>"insertedAt": "2023-07-06T04:08:36.558Z",</p>
                 <p>"updatedAt": "2023-07-06T04:08:36.558Z"</p>
+                <p>"productType": "Beverages"</p>
               </div>
               <p class="endpoint__response__third-indent">},</p>
               <p class="endpoint__response__third-indent">{</p>
@@ -282,12 +286,13 @@
                 <p>"id": "D9eZBQin_QLW6Mz3",</p>
                 <p>"title": "Es Kopi Susu Gula Aren",</p>
                 <p>"image": "https://i.pinimg.com/564x/10/8d/4d/108d4dc285b5ee49addf46b51bb189f7.jpg",</p>
-                <p>"desc": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit",</p>
+                <p>"desc": "Es kopi susu kekinian (kadang disebut es kopi susu gula aren) adalah istilah untuk mencakup jenis racikan kopi yang mengandung susu dan gula aren. Racikan ini umumnya disajikan dingin dengan es dalam kemasan gelas plastik bertutup."</p>
                 <p>"tokopedia": "-",</p>
                 <p>"instagram": "https://www.instagram.com/polivenol_roastery/",</p>
                 <p>"location": "Kantin RIK (Rumpun Ilmu Kesehatan) UI",</p>
                 <p>"insertedAt": "2023-07-06T04:08:36.558Z",</p>
                 <p>"updatedAt": "2023-07-06T04:08:36.558Z"</p>
+                <p>"productType": "Beverages"</p>
               </div>
               <p class="endpoint__response__third-indent">},</p>
               <p class="endpoint__response__third-indent">...</p>
@@ -309,7 +314,35 @@
               <p class="endpoint__response__second-indent">"message": Produk berhasil ditambahkan</p>
               <p class="endpoint__response__second-indent">"data": {</p>
               <div class="endpoint__response__third-indent">
-                <p>"id": "rqdv5juczeskfw1e",</p>
+                <p>"id": "D9eZBQin_QLW6Mz3",</p>
+              </div>
+              <p class="endpoint__response__second-indent">}</p>
+              <p class="endpoint__response__first-indent">}</p>
+            </div>
+          </div>
+          <div class="endpoint" id="getDetailProduct">
+            <h5>Get Detail Product</h5>
+            <p class="endpoint__desc">Mendapatkan detail produk</p>
+            <ul class="endpoint__detail">
+              <li>URL: <span>/products/{id}</span></li>
+              <li>Method: <span>GET</span></li>
+              <li>Response:</li>
+            </ul>
+            <div class="endpoint__response">
+              <p class="endpoint__response__first-indent">{</p>
+              <p class="endpoint__response__second-indent">"status": success</p>
+              <p class="endpoint__response__second-indent">"productDetail": {</p>
+              <div class="endpoint__response__fourth-indent">
+                <p>"id": "D9eZBQin_QLW6Mz3",</p>
+                <p>"title": "Es Kopi Susu Gula Aren",</p>
+                <p>"image": "https://i.pinimg.com/564x/10/8d/4d/108d4dc285b5ee49addf46b51bb189f7.jpg",</p>
+                <p>"desc": "Es kopi susu kekinian (kadang disebut es kopi susu gula aren) adalah istilah untuk mencakup jenis racikan kopi yang mengandung susu dan gula aren. Racikan ini umumnya disajikan dingin dengan es dalam kemasan gelas plastik bertutup."</p>
+                <p>"tokopedia": "-",</p>
+                <p>"instagram": "https://www.instagram.com/polivenol_roastery/",</p>
+                <p>"location": "Kantin RIK (Rumpun Ilmu Kesehatan) UI",</p>
+                <p>"insertedAt": "2023-07-06T04:08:36.558Z",</p>
+                <p>"updatedAt": "2023-07-06T04:08:36.558Z"</p>
+                <p>"productType": "Beverages"</p>
               </div>
               <p class="endpoint__response__second-indent">}</p>
               <p class="endpoint__response__first-indent">}</p>
