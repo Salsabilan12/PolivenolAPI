@@ -1,12 +1,12 @@
 const Hapi = require('@hapi/hapi');
 const routes = require('./routes');
 
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 3000;
 
 const start = async () => {
   const server = Hapi.server({
     port: port,
-    host: 'localhost',
+    host: '0.0.0.0',
     routes: {
       cors: {
         origin: ['*'],
@@ -23,14 +23,6 @@ const start = async () => {
     relativeTo: __dirname,
     path: 'views',
   });
-
-  // server.route({
-  //   method: 'GET',
-  //   path: '/',
-  //   handler: function (request, h) {
-  //     return h.view('index');
-  //   }
-  // });
 
   server.route(routes);
 
